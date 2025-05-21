@@ -650,7 +650,7 @@ public class Main {
               scanner.close();
           }
       }
-// max i min w tablicy
+//26 max i min w tablicy
       import java.util.Scanner;
 
       public class Main {
@@ -685,4 +685,29 @@ public class Main {
 
           scanner.close();
         }
+      }
+//27 zamiena małe litery na duze i odwrotnie
+      import java.util.Scanner;
+
+      public class CaseToggle {
+          public static void main(String[] args) {
+              Scanner scanner = new Scanner(System.in);
+              System.out.print("Podaj tekst: ");
+              String tekst = scanner.nextLine();
+
+              StringBuilder wynik = new StringBuilder();
+              for (int i = 0; i < tekst.length(); i++) {
+                  char c = tekst.charAt(i);
+                  if (Character.isUpperCase(c)) {
+                      wynik.append(Character.toLowerCase(c));
+                  } else if (Character.isLowerCase(c)) {
+                      wynik.append(Character.toUpperCase(c));
+                  } else {
+                      wynik.append(c);  // inne znaki zostają bez zmian
+                  }
+              }
+
+              System.out.println("Zamieniony tekst: " + wynik);
+              scanner.close();
+          }
       }
