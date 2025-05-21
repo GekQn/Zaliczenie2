@@ -620,3 +620,33 @@ public class Main {
 
 
       }
+    //25. Sprawdza czy równanie jest liniowe
+      import java.util.Scanner;
+
+      public class CheckLinearEquation {
+          public static void main(String[] args) {
+              Scanner scanner = new Scanner(System.in);
+              System.out.println("Sprawdzanie równania liniowego ax + b = 0");
+
+              // Wczytanie współczynników a i b
+              System.out.print("Podaj współczynnik a: ");
+              double a = scanner.nextDouble();
+              System.out.print("Podaj współczynnik b: ");
+              double b = scanner.nextDouble();
+
+              // Sprawdzenie czy a != 0
+              if (a != 0) {
+                  double x = -b / a;
+                  System.out.println("To jest równanie liniowe.");
+                  System.out.println("Rozwiązanie: x = " + x);
+              } else {
+                  if (b == 0) {
+                      System.out.println("Równanie jest tożsamościowe (nieskończenie wiele rozwiązań).");
+                  } else {
+                      System.out.println("To nie jest równanie liniowe (brak rozwiązań).");
+                  }
+              }
+
+              scanner.close();
+          }
+      }
