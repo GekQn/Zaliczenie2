@@ -650,3 +650,39 @@ public class Main {
               scanner.close();
           }
       }
+// max i min w tablicy
+      import java.util.Scanner;
+
+      public class Main {
+        public static void main(String[] args) {
+          Scanner scanner = new Scanner(System.in);
+
+          System.out.println("Podaj wielkość tablicy:");
+          int n = scanner.nextInt();
+          int[] tab = new int[n];
+
+          for (int i = 0; i < n; i++) {
+            System.out.println("Podaj liczbę nr: " + (i + 1));
+            tab[i] = scanner.nextInt();
+          }
+
+          // Załóżmy, że pierwszy element jest największy i najmniejszy
+          int max = tab[0];
+          int min = tab[0];
+
+          // Szukamy min i max w tablicy
+          for (int i = 1; i < n; i++) {
+            if (tab[i] > max) {
+              max = tab[i];
+            }
+            if (tab[i] < min) {
+              min = tab[i];
+            }
+          }
+
+          System.out.println("Największa liczba to: " + max);
+          System.out.println("Najmniejsza liczba to: " + min);
+
+          scanner.close();
+        }
+      }
